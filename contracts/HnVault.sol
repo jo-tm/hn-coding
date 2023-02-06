@@ -6,12 +6,11 @@ pragma solidity ^0.8.18;
 @license GNU GPLv3
 @notice A vault to be rebalanced
 */
-import "hardhat/console.sol";
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import '@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol';
-import '@uniswap/v3-periphery/contracts/interfaces/IQuoter.sol';
+import "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
+import 'lib/v3-periphery/contracts/interfaces/ISwapRouter.sol';
+import 'lib/v3-periphery/contracts/interfaces/IQuoter.sol';
 
 // EACAggregatorProxy is used for chainlink oracle
 interface EACAggregatorProxy {
