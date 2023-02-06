@@ -2,5 +2,5 @@
 src = 'contracts'
 test = 'test'
 out = 'artifacts/contracts'
-libs = ['lib']
+libs = ['lib', '@openzeppelin','@uniswap']
 gas_reports = ["HnVault", "Rebalancer"]

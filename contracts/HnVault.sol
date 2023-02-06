@@ -6,11 +6,10 @@ pragma solidity ^0.8.18;
 @license GNU GPLv3
 @notice A vault to be rebalanced
 */
-
-import "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
-import "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import 'lib/v3-periphery/contracts/interfaces/ISwapRouter.sol';
-import 'lib/v3-periphery/contracts/interfaces/IQuoter.sol';
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import '@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@uniswap/v3-periphery/contracts/interfaces/IQuoter.sol';
 
 // EACAggregatorProxy is used for chainlink oracle
 interface EACAggregatorProxy {
@@ -54,7 +53,6 @@ contract HnVault {
   event HnVaultLog(string msg, uint ref);
 
   constructor() {
-    console.log('Deploying HnVault Version:', version);
     nextDividendTS = block.timestamp + dividendFrequency;
     owner = msg.sender;
   }

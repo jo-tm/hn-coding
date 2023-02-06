@@ -7,7 +7,7 @@ contract Rebalancer {
 
     event RebalancerLog(string msg, uint ref);
 
-    constructor(address payable _vaultAddress) public {
+    constructor(address payable _vaultAddress) {
         vault = HnVault(_vaultAddress);
     }
 
